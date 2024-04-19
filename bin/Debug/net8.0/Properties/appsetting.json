@@ -1,0 +1,7 @@
+{
+    "IdentityServer": {
+      "Authority": "https://your-identityserver-url",
+      "ClientId": "SportUI"
+    }
+}
+  

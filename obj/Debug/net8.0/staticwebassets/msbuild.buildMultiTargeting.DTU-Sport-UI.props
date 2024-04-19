@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\DTU-Sport-UI.props" />
+</Project>
