@@ -1,22 +1,13 @@
 ﻿@using Microsoft.AspNetCore.Components.Authorization
-@using Microsoft.AspNetCore.Components.WebAssembly.Authentication
-@using Microsoft.AspNetCore.Components.Authorization
 @inject NavigationManager NavigationManager
-
+@inject AuthenticationStateProvider AuthenticationStateProvider
 
 <CascadingAuthenticationState>
     <Router AppAssembly="@typeof(Program).Assembly">
         <Found Context="routeData">
             <AuthorizeRouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)">
                 <NotAuthorized>
-                    @if (!context.User.Identity.IsAuthenticated)
-                    {
-                        <RedirectToLogin />
-                    }
-                    else
-                    {
-                        <p>You are not authorized to view this page.</p>
-                    }
+                    <p>You are not authorized to view this page.</p>
                 </NotAuthorized>
                 <Authorizing>
                     <p>Authorizing...</p>
@@ -32,10 +23,18 @@
 </CascadingAuthenticationState>
 
 @code {
-    void RedirectToLogin()
+    protected override async Task OnInitializedAsync()
     {
-        NavigationManager.NavigateTo("login", true);
+        var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var isLoginPage = NavigationManager.Uri.Contains("login");
+        if (!authState.User.Identity.IsAuthenticated && !isLoginPage)
+        {
+            NavigationManager.NavigateTo("login", true);
+        }
     }
 }
+
+
+
 
 

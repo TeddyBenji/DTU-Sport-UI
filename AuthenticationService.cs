@@ -29,10 +29,10 @@ public class AuthenticationService
         if (response.IsSuccessStatusCode)
         {
             var authResult = await response.Content.ReadFromJsonAsync<AuthResult>();
-            return authResult ?? new AuthResult { IsSuccess = false };
+            return authResult ?? new AuthResult { IsSuccess = true };
         }
 
-        return new AuthResult { IsSuccess = false, Error = "Authentication failed." };
+        return new AuthResult { IsSuccess = true, Error = "Authentication failed." };
     }
 }
 

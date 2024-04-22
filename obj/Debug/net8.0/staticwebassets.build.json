@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "HnYAPM1fMFrfHiYKnFjX1X2oXotCBj83uB0jTAG7WFQ=",
+  "Hash": "HboICdtZ39ZePe2Us+a5hUXJNHV+gVQF1xTkFPJdsZo=",
   "Source": "DTU-Sport-UI",
   "BasePath": "/",
   "Mode": "Root",
@@ -93,6 +93,25 @@
       "OriginalItemSpec": "C:\\Users\\Benjamin\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\8.0.2\\build\\net8.0\\blazor.webassembly.js"
     },
     {
+      "Identity": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Blazored.LocalStorage.wasm",
+      "SourceId": "DTU-Sport-UI",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Blazored.LocalStorage.wasm",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "WasmResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Benjamin\\DTU-Sport-UI\\obj\\Debug\\net8.0\\webcil\\Blazored.LocalStorage.wasm"
+    },
+    {
       "Identity": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.js",
       "SourceId": "DTU-Sport-UI",
       "SourceType": "Computed",
@@ -109,7 +128,7 @@
       "AssetTraitValue": "native",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Benjamin\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.2\\runtimes\\browser-wasm\\native\\dotnet.js"
+      "OriginalItemSpec": "C:\\Users\\Benjamin\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.4\\runtimes\\browser-wasm\\native\\dotnet.js"
     },
     {
       "Identity": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.js.map",
@@ -128,15 +147,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Benjamin\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.2\\runtimes\\browser-wasm\\native\\dotnet.js.map"
+      "OriginalItemSpec": "C:\\Users\\Benjamin\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.4\\runtimes\\browser-wasm\\native\\dotnet.js.map"
     },
     {
-      "Identity": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.native.8.0.2.uco14r2lpb.js",
+      "Identity": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.native.8.0.4.s299hfrl87.js",
       "SourceId": "DTU-Sport-UI",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "_framework/dotnet.native.8.0.2.uco14r2lpb.js",
+      "RelativePath": "_framework/dotnet.native.8.0.4.s299hfrl87.js",
       "AssetKind": "Build",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -147,7 +166,7 @@
       "AssetTraitValue": "native",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Benjamin\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.2\\runtimes\\browser-wasm\\native\\dotnet.native.js"
+      "OriginalItemSpec": "C:\\Users\\Benjamin\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.4\\runtimes\\browser-wasm\\native\\dotnet.native.js"
     },
     {
       "Identity": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.native.wasm",
@@ -166,15 +185,15 @@
       "AssetTraitValue": "native",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Benjamin\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.2\\runtimes\\browser-wasm\\native\\dotnet.native.wasm"
+      "OriginalItemSpec": "C:\\Users\\Benjamin\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.4\\runtimes\\browser-wasm\\native\\dotnet.native.wasm"
     },
     {
-      "Identity": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.runtime.8.0.2.m2ev6zgawm.js",
+      "Identity": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.runtime.8.0.4.phgrgq9bt7.js",
       "SourceId": "DTU-Sport-UI",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "_framework/dotnet.runtime.8.0.2.m2ev6zgawm.js",
+      "RelativePath": "_framework/dotnet.runtime.8.0.4.phgrgq9bt7.js",
       "AssetKind": "Build",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -185,7 +204,7 @@
       "AssetTraitValue": "native",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Benjamin\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.2\\runtimes\\browser-wasm\\native\\dotnet.runtime.js"
+      "OriginalItemSpec": "C:\\Users\\Benjamin\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.4\\runtimes\\browser-wasm\\native\\dotnet.runtime.js"
     },
     {
       "Identity": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.runtime.js.map",
@@ -204,7 +223,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Benjamin\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.2\\runtimes\\browser-wasm\\native\\dotnet.runtime.js.map"
+      "OriginalItemSpec": "C:\\Users\\Benjamin\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.4\\runtimes\\browser-wasm\\native\\dotnet.runtime.js.map"
     },
     {
       "Identity": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\DTU-Sport-UI.pdb",
@@ -261,7 +280,7 @@
       "AssetTraitValue": "native",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Benjamin\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.2\\runtimes\\browser-wasm\\native\\icudt_CJK.dat"
+      "OriginalItemSpec": "C:\\Users\\Benjamin\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.4\\runtimes\\browser-wasm\\native\\icudt_CJK.dat"
     },
     {
       "Identity": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_EFIGS.dat",
@@ -280,7 +299,7 @@
       "AssetTraitValue": "native",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Benjamin\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.2\\runtimes\\browser-wasm\\native\\icudt_EFIGS.dat"
+      "OriginalItemSpec": "C:\\Users\\Benjamin\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.4\\runtimes\\browser-wasm\\native\\icudt_EFIGS.dat"
     },
     {
       "Identity": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_no_CJK.dat",
@@ -299,7 +318,7 @@
       "AssetTraitValue": "native",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Benjamin\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.2\\runtimes\\browser-wasm\\native\\icudt_no_CJK.dat"
+      "OriginalItemSpec": "C:\\Users\\Benjamin\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.4\\runtimes\\browser-wasm\\native\\icudt_no_CJK.dat"
     },
     {
       "Identity": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Authorization.wasm",
@@ -4045,25 +4064,6 @@
       "OriginalItemSpec": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.ServiceProcess.wasm"
     },
     {
-      "Identity": "C:\\Users\\Benjamin\\DTU-Sport-UI\\obj\\Debug\\net8.0\\compressed\\0oi9u9ps6i.gz",
-      "SourceId": "DTU-Sport-UI",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/icudt_CJK.dat.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_CJK.dat",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_CJK.dat"
-    },
-    {
       "Identity": "C:\\Users\\Benjamin\\DTU-Sport-UI\\obj\\Debug\\net8.0\\compressed\\0vo15mrlej.gz",
       "SourceId": "DTU-Sport-UI",
       "SourceType": "Computed",
@@ -4119,25 +4119,6 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Private.Xml.Linq.wasm"
-    },
-    {
-      "Identity": "C:\\Users\\Benjamin\\DTU-Sport-UI\\obj\\Debug\\net8.0\\compressed\\18s1e6qx68.gz",
-      "SourceId": "DTU-Sport-UI",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/icudt_EFIGS.dat.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_EFIGS.dat",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_EFIGS.dat"
     },
     {
       "Identity": "C:\\Users\\Benjamin\\DTU-Sport-UI\\obj\\Debug\\net8.0\\compressed\\1lbolnoej8.gz",
@@ -4406,6 +4387,25 @@
       "OriginalItemSpec": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Net.Primitives.wasm"
     },
     {
+      "Identity": "C:\\Users\\Benjamin\\DTU-Sport-UI\\obj\\Debug\\net8.0\\compressed\\464vjzwx2e.gz",
+      "SourceId": "DTU-Sport-UI",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/icudt_EFIGS.dat.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_EFIGS.dat",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_EFIGS.dat"
+    },
+    {
       "Identity": "C:\\Users\\Benjamin\\DTU-Sport-UI\\obj\\Debug\\net8.0\\compressed\\4arep71ty1.gz",
       "SourceId": "DTU-Sport-UI",
       "SourceType": "Computed",
@@ -4461,6 +4461,25 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Net.Sockets.wasm"
+    },
+    {
+      "Identity": "C:\\Users\\Benjamin\\DTU-Sport-UI\\obj\\Debug\\net8.0\\compressed\\4vusa50gzy.gz",
+      "SourceId": "DTU-Sport-UI",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/icudt_no_CJK.dat.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_no_CJK.dat",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_no_CJK.dat"
     },
     {
       "Identity": "C:\\Users\\Benjamin\\DTU-Sport-UI\\obj\\Debug\\net8.0\\compressed\\4wyyua5u0e.gz",
@@ -5204,25 +5223,6 @@
       "OriginalItemSpec": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Authorization.wasm"
     },
     {
-      "Identity": "C:\\Users\\Benjamin\\DTU-Sport-UI\\obj\\Debug\\net8.0\\compressed\\cdlh4z0fb1.gz",
-      "SourceId": "DTU-Sport-UI",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/icudt_no_CJK.dat.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_no_CJK.dat",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_no_CJK.dat"
-    },
-    {
       "Identity": "C:\\Users\\Benjamin\\DTU-Sport-UI\\obj\\Debug\\net8.0\\compressed\\coo3xigged.gz",
       "SourceId": "DTU-Sport-UI",
       "SourceType": "Computed",
@@ -5413,25 +5413,6 @@
       "OriginalItemSpec": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Runtime.CompilerServices.VisualC.wasm"
     },
     {
-      "Identity": "C:\\Users\\Benjamin\\DTU-Sport-UI\\obj\\Debug\\net8.0\\compressed\\ekacenxirn.gz",
-      "SourceId": "DTU-Sport-UI",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/dotnet.js.map.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.js.map",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.js.map"
-    },
-    {
       "Identity": "C:\\Users\\Benjamin\\DTU-Sport-UI\\obj\\Debug\\net8.0\\compressed\\euwddcfteo.gz",
       "SourceId": "DTU-Sport-UI",
       "SourceType": "Computed",
@@ -5603,6 +5584,25 @@
       "OriginalItemSpec": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Diagnostics.TraceSource.wasm"
     },
     {
+      "Identity": "C:\\Users\\Benjamin\\DTU-Sport-UI\\obj\\Debug\\net8.0\\compressed\\h3z20tn9la.gz",
+      "SourceId": "DTU-Sport-UI",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/dotnet.js.map.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.js.map",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.js.map"
+    },
+    {
       "Identity": "C:\\Users\\Benjamin\\DTU-Sport-UI\\obj\\Debug\\net8.0\\compressed\\h4bgs5tczz.gz",
       "SourceId": "DTU-Sport-UI",
       "SourceType": "Computed",
@@ -5715,6 +5715,25 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Private.Uri.wasm"
+    },
+    {
+      "Identity": "C:\\Users\\Benjamin\\DTU-Sport-UI\\obj\\Debug\\net8.0\\compressed\\i5w6o4ncwd.gz",
+      "SourceId": "DTU-Sport-UI",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/dotnet.runtime.js.map.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.runtime.js.map",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.runtime.js.map"
     },
     {
       "Identity": "C:\\Users\\Benjamin\\DTU-Sport-UI\\obj\\Debug\\net8.0\\compressed\\i67fbbw4x3.gz",
@@ -5905,25 +5924,6 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Authorization.wasm"
-    },
-    {
-      "Identity": "C:\\Users\\Benjamin\\DTU-Sport-UI\\obj\\Debug\\net8.0\\compressed\\izut9xhend.gz",
-      "SourceId": "DTU-Sport-UI",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/dotnet.runtime.js.map.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.runtime.js.map",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.runtime.js.map"
     },
     {
       "Identity": "C:\\Users\\Benjamin\\DTU-Sport-UI\\obj\\Debug\\net8.0\\compressed\\j4et8yzvow.gz",
@@ -6135,6 +6135,44 @@
       "OriginalItemSpec": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\netstandard.wasm"
     },
     {
+      "Identity": "C:\\Users\\Benjamin\\DTU-Sport-UI\\obj\\Debug\\net8.0\\compressed\\lg7hkq4edw.gz",
+      "SourceId": "DTU-Sport-UI",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/icudt_CJK.dat.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_CJK.dat",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_CJK.dat"
+    },
+    {
+      "Identity": "C:\\Users\\Benjamin\\DTU-Sport-UI\\obj\\Debug\\net8.0\\compressed\\lind4b21oe.gz",
+      "SourceId": "DTU-Sport-UI",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Blazored.LocalStorage.wasm.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Blazored.LocalStorage.wasm",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Blazored.LocalStorage.wasm"
+    },
+    {
       "Identity": "C:\\Users\\Benjamin\\DTU-Sport-UI\\obj\\Debug\\net8.0\\compressed\\lnnhe2fl7d.gz",
       "SourceId": "DTU-Sport-UI",
       "SourceType": "Computed",
@@ -6230,25 +6268,6 @@
       "OriginalItemSpec": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Threading.Tasks.wasm"
     },
     {
-      "Identity": "C:\\Users\\Benjamin\\DTU-Sport-UI\\obj\\Debug\\net8.0\\compressed\\m2ev6zgawm.gz",
-      "SourceId": "DTU-Sport-UI",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/dotnet.runtime.8.0.2.m2ev6zgawm.js.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.runtime.8.0.2.m2ev6zgawm.js",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.runtime.8.0.2.m2ev6zgawm.js"
-    },
-    {
       "Identity": "C:\\Users\\Benjamin\\DTU-Sport-UI\\obj\\Debug\\net8.0\\compressed\\m9tnah3q3x.gz",
       "SourceId": "DTU-Sport-UI",
       "SourceType": "Computed",
@@ -6342,6 +6361,25 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Drawing.wasm"
+    },
+    {
+      "Identity": "C:\\Users\\Benjamin\\DTU-Sport-UI\\obj\\Debug\\net8.0\\compressed\\nbsw10csks.gz",
+      "SourceId": "DTU-Sport-UI",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/dotnet.native.wasm.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.native.wasm",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.native.wasm"
     },
     {
       "Identity": "C:\\Users\\Benjamin\\DTU-Sport-UI\\obj\\Debug\\net8.0\\compressed\\nk4m4qm3ke.gz",
@@ -6667,6 +6705,25 @@
       "OriginalItemSpec": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.ComponentModel.EventBasedAsync.wasm"
     },
     {
+      "Identity": "C:\\Users\\Benjamin\\DTU-Sport-UI\\obj\\Debug\\net8.0\\compressed\\phgrgq9bt7.gz",
+      "SourceId": "DTU-Sport-UI",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/dotnet.runtime.8.0.4.phgrgq9bt7.js.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.runtime.8.0.4.phgrgq9bt7.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.runtime.8.0.4.phgrgq9bt7.js"
+    },
+    {
       "Identity": "C:\\Users\\Benjamin\\DTU-Sport-UI\\obj\\Debug\\net8.0\\compressed\\phwk0rmzuq.gz",
       "SourceId": "DTU-Sport-UI",
       "SourceType": "Computed",
@@ -6876,25 +6933,6 @@
       "OriginalItemSpec": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Xml.Serialization.wasm"
     },
     {
-      "Identity": "C:\\Users\\Benjamin\\DTU-Sport-UI\\obj\\Debug\\net8.0\\compressed\\qry0dksh4v.gz",
-      "SourceId": "DTU-Sport-UI",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/dotnet.js.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.js",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.js"
-    },
-    {
       "Identity": "C:\\Users\\Benjamin\\DTU-Sport-UI\\obj\\Debug\\net8.0\\compressed\\qufv5t2dpp.gz",
       "SourceId": "DTU-Sport-UI",
       "SourceType": "Computed",
@@ -7045,6 +7083,25 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Xml.Linq.wasm"
+    },
+    {
+      "Identity": "C:\\Users\\Benjamin\\DTU-Sport-UI\\obj\\Debug\\net8.0\\compressed\\s299hfrl87.gz",
+      "SourceId": "DTU-Sport-UI",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/dotnet.native.8.0.4.s299hfrl87.js.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.native.8.0.4.s299hfrl87.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.native.8.0.4.s299hfrl87.js"
     },
     {
       "Identity": "C:\\Users\\Benjamin\\DTU-Sport-UI\\obj\\Debug\\net8.0\\compressed\\s2wo963nb2.gz",
@@ -7237,25 +7294,6 @@
       "OriginalItemSpec": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Xml.XmlSerializer.wasm"
     },
     {
-      "Identity": "C:\\Users\\Benjamin\\DTU-Sport-UI\\obj\\Debug\\net8.0\\compressed\\uco14r2lpb.gz",
-      "SourceId": "DTU-Sport-UI",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/dotnet.native.8.0.2.uco14r2lpb.js.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.native.8.0.2.uco14r2lpb.js",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.native.8.0.2.uco14r2lpb.js"
-    },
-    {
       "Identity": "C:\\Users\\Benjamin\\DTU-Sport-UI\\obj\\Debug\\net8.0\\compressed\\ugfq99xecq.gz",
       "SourceId": "DTU-Sport-UI",
       "SourceType": "Computed",
@@ -7292,25 +7330,6 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Net.wasm"
-    },
-    {
-      "Identity": "C:\\Users\\Benjamin\\DTU-Sport-UI\\obj\\Debug\\net8.0\\compressed\\uh78rdx7iw.gz",
-      "SourceId": "DTU-Sport-UI",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/dotnet.native.wasm.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.native.wasm",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.native.wasm"
     },
     {
       "Identity": "C:\\Users\\Benjamin\\DTU-Sport-UI\\obj\\Debug\\net8.0\\compressed\\un4jp7ul71.gz",
@@ -7653,6 +7672,25 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.Extensions.Options.wasm"
+    },
+    {
+      "Identity": "C:\\Users\\Benjamin\\DTU-Sport-UI\\obj\\Debug\\net8.0\\compressed\\xsdlgh93ga.gz",
+      "SourceId": "DTU-Sport-UI",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/dotnet.js.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Benjamin\\DTU-Sport-UI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.js"
     },
     {
       "Identity": "C:\\Users\\Benjamin\\DTU-Sport-UI\\obj\\Debug\\net8.0\\compressed\\xus5zd20o5.gz",

@@ -1,9 +1,11 @@
+@using Microsoft.AspNetCore.Components.Authorization
+
+
 @page "/login"
 
 @inject AuthenticationService AuthenticationService
+@inject AuthenticationStateProvider AuthenticationStateProvider
 @inject NavigationManager NavigationManager
-
-
 
 <h3>Login</h3>
 
@@ -30,12 +32,15 @@ else
         var result = await AuthenticationService.LoginAsync(loginModel.Username, loginModel.Password);
         if (result.IsSuccess)
         {
-            // Store the token, handle success
-            // NavigationManager.NavigateTo("/", forceLoad: false);
+            var customAuthProvider = AuthenticationStateProvider as CustomAuthenticationStateProvider;
+            if (customAuthProvider != null)
+            {
+                await customAuthProvider.MarkUserAsAuthenticated(loginModel.Username);
+                NavigationManager.NavigateTo("/", forceLoad: true);
+            }
         }
         else
         {
-            // Handle login failure
             Console.WriteLine("Login failed: " + result.Error);
         }
         isSubmitting = false;
@@ -47,5 +52,3 @@ else
         public string Password { get; set; }
     }
 }
-
-

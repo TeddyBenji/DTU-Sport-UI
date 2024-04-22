@@ -1,27 +1,52 @@
 using Microsoft.AspNetCore.Components.Authorization;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using Blazored.LocalStorage;
 
 public class CustomAuthenticationStateProvider : AuthenticationStateProvider
 {
-    private ClaimsPrincipal _anonymous = new ClaimsPrincipal(new ClaimsIdentity());
+    private readonly ILocalStorageService _localStorage;
 
-    public override Task<AuthenticationState> GetAuthenticationStateAsync()
+    public CustomAuthenticationStateProvider(ILocalStorageService localStorage)
     {
-        // Here you need to read the user's authentication state from somewhere, e.g., local storage or cookies
-        return Task.FromResult(new AuthenticationState(_anonymous));
+        _localStorage = localStorage;
     }
 
-    public void MarkUserAsAuthenticated(string username)
+    public override async Task<AuthenticationState> GetAuthenticationStateAsync()
     {
-        var authenticatedUser = new ClaimsPrincipal(new ClaimsIdentity(new[] { new Claim(ClaimTypes.Name, username) }, "authType"));
-        var authState = Task.FromResult(new AuthenticationState(authenticatedUser));
-        NotifyAuthenticationStateChanged(authState);
+        var userName = await _localStorage.GetItemAsStringAsync("username");
+        
+        if (string.IsNullOrEmpty(userName))
+        {
+            return new AuthenticationState(new ClaimsPrincipal(new ClaimsIdentity()));
+        }
+
+        var identity = new ClaimsIdentity(new[]
+        {
+            new Claim(ClaimTypes.Name, userName),
+        }, "apiauth_type");
+
+        var user = new ClaimsPrincipal(identity);
+
+        return new AuthenticationState(user);
     }
 
-    public void MarkUserAsLoggedOut()
+    public async Task MarkUserAsAuthenticated(string username)
     {
-        var authState = Task.FromResult(new AuthenticationState(_anonymous));
-        NotifyAuthenticationStateChanged(authState);
+        await _localStorage.SetItemAsStringAsync("username", username);
+        var identity = new ClaimsIdentity(new[]
+        {
+            new Claim(ClaimTypes.Name, username),
+        }, "apiauth_type");
+
+        var user = new ClaimsPrincipal(identity);
+        NotifyAuthenticationStateChanged(Task.FromResult(new AuthenticationState(user)));
+    }
+
+    public async Task MarkUserAsLoggedOut()
+    {
+        await _localStorage.RemoveItemAsync("username");
+        NotifyAuthenticationStateChanged(Task.FromResult(new AuthenticationState(new ClaimsPrincipal(new ClaimsIdentity()))));
     }
 }
+

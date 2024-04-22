@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DTU-Sport-UI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8154056e9549113a2a8aee7a8956ad7d07f3f526")]
 [assembly: System.Reflection.AssemblyProductAttribute("DTU-Sport-UI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DTU-Sport-UI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
