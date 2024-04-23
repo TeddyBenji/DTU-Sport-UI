@@ -28,12 +28,11 @@ public class AuthenticationService
         var response = await _httpClient.PostAsync("http://localhost:5250/connect/token", new FormUrlEncodedContent(requestBody));
         if (response.IsSuccessStatusCode)
         {
-            var authResult = await response.Content.ReadFromJsonAsync<AuthResult>();
-            return authResult ?? new AuthResult { IsSuccess = true };
-        }
+        var authResult = await response.Content.ReadFromJsonAsync<AuthResult>();
+        return authResult ?? new AuthResult { IsSuccess = false, Error = "Invalid response from server" };
+        }   
+        return new AuthResult { IsSuccess = false, Error = "Authentication failed." };
 
-        return new AuthResult { IsSuccess = true, Error = "Authentication failed." };
-    }
 }
 
 public class AuthResult
@@ -41,6 +40,7 @@ public class AuthResult
     public bool IsSuccess { get; set; }
     public string Error { get; set; }
     public string Token { get; set; }
+}
 }
 
 
