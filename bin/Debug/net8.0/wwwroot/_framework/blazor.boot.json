@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "DTU-Sport-UI",
   "resources": {
-    "hash": "sha256-oLTiERP9p9+ICdtBIsE0usEE92w5tihULN+a9es/8vE=",
+    "hash": "sha256-UJYeubYSDBVAXVjgW4jZvcqXVCGh5Wy41AcGU41MJU4=",
     "jsModuleNative": {
       "dotnet.native.8.0.4.s299hfrl87.js": "sha256-ju0+XWE0ihz554eKEj0HQ8Opa61xpbUIaX5/MNo8we4="
     },
@@ -212,10 +212,10 @@
       "mscorlib.wasm": "sha256-OH3kXneWqQMz6CUSo6POZqIeMqn9+5RR+IgHn5TnIwA=",
       "netstandard.wasm": "sha256-ZOswxXEbR2TmqjpbaBEdgr85Bv1NC4GwOwoJ+oxXM3M=",
       "System.Private.CoreLib.wasm": "sha256-I2w0iHf5nvSQyF1YE1VbgdTzmmz6a4OE6J7vo5wFa/4=",
-      "DTU-Sport-UI.wasm": "sha256-L7mDHPIu/wTQrMsZOGfuAV5V4zuFj4xD4uJFJUQloSc="
+      "DTU-Sport-UI.wasm": "sha256-MW/gr5MmUEPESvrRYjzasWCN47fFS2HjfYVwr5eUpLs="
     },
     "pdb": {
-      "DTU-Sport-UI.pdb": "sha256-T/8i6o0BOa0Frh4hC2GuQX+vYbe9+LtnDdIDAlN6dEE="
+      "DTU-Sport-UI.pdb": "sha256-8wHzrom7jPbRtAAMJYAzIgqfuCA8Di6ApTPaWKXuVjs="
     }
   },
   "cacheBootResources": true,

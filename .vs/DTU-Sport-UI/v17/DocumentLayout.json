@@ -1,0 +1,104 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Benjamin\\DTU-Sport-UI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B083DC20-F35D-465D-891A-5AEF9B8DAEA4}|DTU-Sport-UI.csproj|c:\\users\\benjamin\\dtu-sport-ui\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B083DC20-F35D-465D-891A-5AEF9B8DAEA4}|DTU-Sport-UI.csproj|solutionrelative:pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B083DC20-F35D-465D-891A-5AEF9B8DAEA4}|DTU-Sport-UI.csproj|c:\\users\\benjamin\\dtu-sport-ui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B083DC20-F35D-465D-891A-5AEF9B8DAEA4}|DTU-Sport-UI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B083DC20-F35D-465D-891A-5AEF9B8DAEA4}|DTU-Sport-UI.csproj|c:\\users\\benjamin\\dtu-sport-ui\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B083DC20-F35D-465D-891A-5AEF9B8DAEA4}|DTU-Sport-UI.csproj|solutionrelative:pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B083DC20-F35D-465D-891A-5AEF9B8DAEA4}|DTU-Sport-UI.csproj|c:\\users\\benjamin\\dtu-sport-ui\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B083DC20-F35D-465D-891A-5AEF9B8DAEA4}|DTU-Sport-UI.csproj|solutionrelative:authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B083DC20-F35D-465D-891A-5AEF9B8DAEA4}|DTU-Sport-UI.csproj|c:\\users\\benjamin\\dtu-sport-ui\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B083DC20-F35D-465D-891A-5AEF9B8DAEA4}|DTU-Sport-UI.csproj|solutionrelative:app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Benjamin\\DTU-Sport-UI\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Benjamin\\DTU-Sport-UI\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-23T10:03:22.559Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Home.razor",
+              "DocumentMoniker": "C:\\Users\\Benjamin\\DTU-Sport-UI\\Pages\\Home.razor",
+              "RelativeDocumentMoniker": "Pages\\Home.razor",
+              "ToolTip": "C:\\Users\\Benjamin\\DTU-Sport-UI\\Pages\\Home.razor",
+              "RelativeToolTip": "Pages\\Home.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-23T09:52:21.689Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AuthenticationService.cs",
+              "DocumentMoniker": "C:\\Users\\Benjamin\\DTU-Sport-UI\\AuthenticationService.cs",
+              "RelativeDocumentMoniker": "AuthenticationService.cs",
+              "ToolTip": "C:\\Users\\Benjamin\\DTU-Sport-UI\\AuthenticationService.cs",
+              "RelativeToolTip": "AuthenticationService.cs",
+              "ViewState": "AQIAACoAAAAAAAAAAAAEwDIAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-23T09:23:24.498Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Login.razor",
+              "DocumentMoniker": "C:\\Users\\Benjamin\\DTU-Sport-UI\\Pages\\Login.razor",
+              "RelativeDocumentMoniker": "Pages\\Login.razor",
+              "ToolTip": "C:\\Users\\Benjamin\\DTU-Sport-UI\\Pages\\Login.razor",
+              "RelativeToolTip": "Pages\\Login.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACYAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-23T09:16:55.801Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "App.razor",
+              "DocumentMoniker": "C:\\Users\\Benjamin\\DTU-Sport-UI\\App.razor",
+              "RelativeDocumentMoniker": "App.razor",
+              "ToolTip": "C:\\Users\\Benjamin\\DTU-Sport-UI\\App.razor",
+              "RelativeToolTip": "App.razor",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-23T09:12:39.529Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
