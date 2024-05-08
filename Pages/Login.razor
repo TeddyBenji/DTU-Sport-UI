@@ -1,11 +1,9 @@
 @using Microsoft.AspNetCore.Components.Authorization
-
-
 @page "/login"
 
 @inject AuthenticationService AuthenticationService
-@inject AuthenticationStateProvider AuthenticationStateProvider
 @inject NavigationManager NavigationManager
+@inject HttpClient Http
 
 <h3>Login</h3>
 
@@ -32,12 +30,8 @@ else
         var result = await AuthenticationService.LoginAsync(loginModel.Username, loginModel.Password);
         if (result.IsSuccess)
         {
-            var customAuthProvider = AuthenticationStateProvider as CustomAuthenticationStateProvider;
-            if (customAuthProvider != null)
-            {
-                await customAuthProvider.MarkUserAsAuthenticated(loginModel.Username);
-                NavigationManager.NavigateTo("/", forceLoad: true);
-            }
+            // Directly navigate to the home page after successful login
+            NavigationManager.NavigateTo("/", forceLoad: true);
         }
         else
         {

@@ -1,26 +1,47 @@
 ﻿@page "/"
-
 @using Microsoft.AspNetCore.Components.Authorization
+@using DTU_Sport_UI.Services
+@using DTU_Sport_UI.Models
+@inject INotificationService NotificationService
 @inject AuthenticationStateProvider AuthenticationStateProvider
 @inject NavigationManager NavigationManager
+@inject HttpClient ServerAPI
 
-<PageTitle>ProfilePage</PageTitle>
+<PageTitle>Home</PageTitle>
+
+@code {
+    private AuthenticationState authenticationState;
+    private List<NotificationDto> notifications;
+
+    protected override async Task OnInitializedAsync()
+    {
+        authenticationState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        if (authenticationState.User.Identity.IsAuthenticated)
+        {
+            notifications = await NotificationService.GetUnreadNotificationsAsync();
+        }
+    }
+}
 
 @if (authenticationState.User.Identity.IsAuthenticated)
 {
-    <h1>Welcome @authenticationState.User.Identity.Name.</h1>
+    <h1>Welcome @authenticationState.User.Identity.Name!</h1>
+    <h3>Your notifications:</h3>
+    if (notifications != null && notifications.Count > 0)
+    {
+        <ul>
+            @foreach (var notification in notifications)
+            {
+                <li>@notification.Message - @notification.EventDate.ToShortDateString()</li>
+            }
+        </ul>
+    }
+    else
+    {
+        <p>You have no new notifications.</p>
+    }
 }
 else
 {
     <p>Welcome, please log in.</p>
 }
-
-@code {
-    private AuthenticationState authenticationState;
-
-    protected override async Task OnInitializedAsync()
-    {
-        authenticationState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
-    }
-}
-
