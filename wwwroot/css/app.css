@@ -101,3 +101,73 @@ a, .btn-link {
 code {
     color: #c02d76;
 }
+
+
+.club-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.club-list li {
+    margin-bottom: 20px; /* Spacing between club entries */
+    display: flex;
+    align-items: center; /* Vertically align the contents */
+    justify-content: space-between; /* Spreads the items to each end */
+    padding: 10px;
+    border-bottom: 1px solid #ccc; /* Optional line between entries */
+}
+
+.club-info {
+    flex: 1; /* Allows the club info to take up the remaining space */
+    margin-right: 10px; /* Adds some space between the text and the button */
+}
+
+.register-btn {
+    white-space: nowrap; /* Ensures the button text doesn't wrap */
+}
+
+.card-header {
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.badge {
+    font-size: 0.8em;
+}
+
+h3 {
+    margin-bottom: 2rem; /* Adjust the space below the h3 header */
+}
+
+.training-logs-container {
+    margin-top: 1rem; /* Adds space above the training log container */
+    padding: 0 1rem; /* Optional: Adds horizontal padding */
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 1rem; /* Adds space below the input field */
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1040;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
