@@ -171,3 +171,63 @@ input[type="text"] {
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+.form-input {
+    margin-bottom: 10px; /* Adds space below each input */
+}
+
+.form-button {
+    margin-top: 100px; /* Adds space above the button */
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+    border-collapse: collapse;
+}
+
+    .table th, .table td {
+        padding: 0.75rem;
+        vertical-align: top;
+        border-top: 1px solid #dee2e6;
+    }
+
+    .table thead th {
+        vertical-align: bottom;
+        border-bottom: 2px solid #dee2e6;
+    }
+
+    .table tbody + tbody {
+        border-top: 2px solid #dee2e6;
+    }
+
+/* Optional: Responsive table layout */
+@media (max-width: 768px) {
+    .table-responsive {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+/* CSS for normal button state */
+.button-custom {
+    background-color: darkred;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+    /* CSS for hover state */
+    .button-custom:hover {
+        background-color: #990000; /* Lighter red for hover */
+    }
+
+/* Add to app.css or a similar file */
+.container {
+    margin-left: 10px;
+    }

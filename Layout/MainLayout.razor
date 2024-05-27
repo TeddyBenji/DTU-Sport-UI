@@ -1,4 +1,36 @@
 ﻿@inherits LayoutComponentBase
+
+<style>
+    .page {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: row;
+    }
+
+    .sidebar {
+        background-color: Crimson; /* Red theme for the sidebar */
+    }
+
+    .top-row {
+        background-color: Crimson;
+        color: white;
+    }
+
+    .content {
+        flex-grow: 1;
+        padding: 20px; /* Padding for content */
+    }
+
+    a {
+        color: white; /* Ensuring text links in the top row are white */
+        text-decoration: none; /* Optional: removes underline from links */
+    }
+
+        a:hover {
+            text-decoration: underline; /* Optional: adds underline on hover */
+        }
+</style>
+
 <div class="page">
     <div class="sidebar">
         <NavMenu />
