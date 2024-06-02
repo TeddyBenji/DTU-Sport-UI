@@ -1,0 +1,149 @@
+﻿@page "/Training"
+@using Microsoft.AspNetCore.Components.Authorization
+@using DTU_Sport_UI.Services
+@using DTU_Sport_UI.Models
+@inject IExerciseService ExerciseService
+@inject AuthenticationStateProvider AuthenticationStateProvider
+
+<h3 style="margin-left: 10px">Training Log</h3>
+<input type="text" @bind="searchTerm" placeholder="Search for an exercise..." class="form-control mb-3" style="margin-left: 10px" />
+
+<button class="button-custom" style="margin-left: 10px" @onclick="ToggleModal">Add Training</button>
+
+<div class="training-logs-container">
+    @if (workoutLogs == null)
+    {
+        <p><em>Loading...</em></p>
+    }
+    else if (filteredLogs.Count() == 0)
+    {
+        <p>No training logs found for "@searchTerm".</p>
+    }
+    else
+    {
+        @foreach (var group in filteredLogs.GroupBy(log => log.Date.Date))
+        {
+            <div>
+                <h5 @onclick="@(() => ToggleDate(group.Key))">@group.Key.ToString("dddd, dd MMMM yyyy")</h5>
+                @if (IsExpanded(group.Key))
+                {
+                    foreach (var log in group)
+                    {
+                        <p>@log.Exercise - @string.Join(", ", log.Metrics.Select(m => $"{m.MetricName}: {m.Value}"))</p>
+                    }
+                }
+            </div>
+        }
+    }
+</div>
+
+@if (isModalOpen)
+{
+    <div class="modal-backdrop" style="display:block">
+        <div class="modal-content">
+            <span class="close" @onclick="ToggleModal">&times;</span>
+            <h3>Add Training Log</h3>
+            <EditForm Model="@newTraining" OnValidSubmit="HandleValidSubmit">
+                <InputSelect @bind-Value="newTraining.ExerciseName">
+                    <option value="">Select an Exercise</option>
+                    @foreach (var exercise in availableExercises)
+                    {
+                        <option value="@exercise.Name">@exercise.Name</option>
+                    }
+                </InputSelect>
+                <div>
+                    @foreach (var metric in newTraining.Metrics)
+                    {
+                        <div>
+                            <InputSelect @bind-Value="metric.Name">
+                                <option value="">Select Metric</option>
+                                @foreach (var availableMetric in availableMetrics)
+                                {
+                                    <option value="@availableMetric.Name">@availableMetric.Name</option>
+                                }
+                            </InputSelect>
+                            <InputNumber @bind-Value="metric.Value" class="form-control" placeholder="Value" />
+                            <button class="btn btn-danger" @onclick="() => RemoveMetric(metric)">Remove</button>
+                        </div>
+                    }
+                </div>
+                <button class="btn btn-secondary" @onclick="AddMetric">Add Metric</button>
+                <button type="submit" class="btn btn-success">Save</button>
+            </EditForm>
+        </div>
+    </div>
+}
+
+@code {
+    private List<ExerciseLogDto>? workoutLogs;
+    private IEnumerable<ExerciseLogDto> filteredLogs => workoutLogs?.Where(log => string.IsNullOrEmpty(searchTerm) || log.Exercise.Contains(searchTerm, StringComparison.OrdinalIgnoreCase)) ?? new List<ExerciseLogDto>();
+    private string searchTerm = "";
+    private bool isModalOpen = false;
+    private TrainingLogDto newTraining = new TrainingLogDto { Metrics = new List<TrainingMetricDto>() };
+    private List<ExerciseModel> availableExercises = new List<ExerciseModel>();
+    private List<MetricDto> availableMetrics = new List<MetricDto>();
+    private Dictionary<DateTime, bool> expandedStates = new Dictionary<DateTime, bool>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        workoutLogs = await ExerciseService.GetWorkoutLogsAsync();
+        availableExercises = await ExerciseService.GetAllExercisesAsync();
+        availableMetrics = await ExerciseService.GetAllMetricAsync();
+    }
+
+    private void ToggleModal()
+    {
+        isModalOpen = !isModalOpen;
+    }
+
+    private void AddMetric()
+    {
+        newTraining.Metrics.Add(new TrainingMetricDto());
+    }
+
+    private void RemoveMetric(TrainingMetricDto metric)
+    {
+        newTraining.Metrics.Remove(metric);
+    }
+
+    private async Task HandleValidSubmit()
+    {
+        var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var user = authState.User;
+
+        if (user.Identity?.IsAuthenticated ?? false)
+        {
+            newTraining.UserName = authState.User.FindFirst("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name")?.Value ?? "Guest";
+            newTraining.ExerciseDate = DateTime.Now; 
+        }
+
+        var result = await ExerciseService.RegisterTrainingAsync(newTraining);
+        if (result)
+        {
+            workoutLogs?.Add(newTraining.ToExerciseLogDto()); 
+            ToggleModal();
+            newTraining = new TrainingLogDto { Metrics = new List<TrainingMetricDto>() }; 
+        }
+    }
+
+    private void ToggleDate(DateTime date)
+    {
+        if (expandedStates.ContainsKey(date))
+        {
+            expandedStates[date] = !expandedStates[date];
+        }
+        else
+        {
+            expandedStates.Add(date, true);
+        }
+    }
+
+    private bool IsExpanded(DateTime date)
+    {
+        if (expandedStates.TryGetValue(date, out var isExpanded))
+        {
+            return isExpanded;
+        }
+        return false;
+    }
+}

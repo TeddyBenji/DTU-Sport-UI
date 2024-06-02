@@ -1,0 +1,133 @@
+﻿@page "/Clubmanagement"
+@using Microsoft.AspNetCore.Components.Authorization
+@using DTU_Sport_UI.Models
+@using DTU_Sport_UI.Services
+@inject IClubService ClubService
+@inject IJSRuntime JSRuntime
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@inject NavigationManager NavigationManager
+
+<h3 style="margin-left: 10px">ClubManagment</h3>
+
+<button class="button-custom" @onclick="ShowCreateClubModal">Create New Club</button>
+
+@if (showCreateClubModal)
+{
+    <EditForm Model="newClub" OnValidSubmit="HandleCreateClub">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+
+        <div class="form-group">
+            <label for="clubName">Club Name</label>
+            <InputText id="clubName" @bind-Value="newClub.ClubName" class="form-control" placeholder="Enter club name" />
+        </div>
+
+        <div class="form-group">
+            <label for="description">Description</label>
+            <InputTextArea id="description" @bind-Value="newClub.Description" class="form-control" placeholder="Describe the club" />
+        </div>
+
+        <div class="form-group">
+            <label for="ownerUsername">Primary caretaker of club</label>
+            <InputText id="ownerUsername" @bind-Value="newClub.OwnerUsername" class="form-control" placeholder="Enter Username of the person that will be primarily responseable for the club" />
+        </div>
+
+        <button type="submit" class="button-custom" style="margin-top: 10px">Create Club</button>
+    </EditForm>
+}
+
+
+
+<div class="club-list">
+    @if (clubs == null)
+    {
+        <p><em>Loading...</em></p>
+    }
+    else if (clubs.Count == 0)
+    {
+        <p>No clubs available.</p>
+    }
+    else
+    {
+        <ul>
+            @foreach (var club in clubs)
+            {
+                <li>
+                    <div class="club-info">
+                        <b>@club.ClubName</b> - @club.Description (Created on @club.CreationDate.ToShortDateString())
+                    </div>
+                    <button class="button-custom" style="margin-right: 10px">Change Owner</button>
+                    <button class="button-custom" @onclick="() => DeleteClub(club.ClubName)">Delete</button>
+                </li>
+            }
+        </ul>
+    }
+</div>
+
+
+@code {
+
+
+    private bool showCreateClubModal = false;
+    private ClubModel newClub = new ClubModel();
+    private List<ClubDto>? clubs;
+    private string username = "Guest";
+
+    protected override async Task OnInitializedAsync()
+    {
+        var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var user = authState.User;
+
+        if (user.Identity.IsAuthenticated)
+        {
+            username = user.FindFirst("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name")?.Value ?? "Guest";
+        }
+
+        clubs = await ClubService.GetAllClubsAsync();
+    }
+
+    private void ShowCreateClubModal()
+    {
+        showCreateClubModal = true;
+    }
+
+    private async Task HandleCreateClub()
+    {
+        var success = await ClubService.CreateClubAsync(newClub);
+        if (success)
+        {
+            showCreateClubModal = false;
+            clubs = await ClubService.GetAllClubsAsync(); // Refresh the list of clubs
+            NavigationManager.NavigateTo("/ClubManagement", forceLoad: true);
+        }
+        else
+        {
+            Console.WriteLine("Failed to create the club.");
+        }
+    }
+
+    private async Task ConfirmDelete(string clubName)
+    {
+        var confirmed = await JSRuntime.InvokeAsync<bool>("confirm", $"Are you sure you want to delete {clubName}?");
+        if (confirmed)
+        {
+            await DeleteClub(clubName);
+        }
+    }
+
+    private async Task DeleteClub(string clubName)
+    {
+        bool result = await ClubService.DeleteClubAsync(clubName);
+        if (result)
+        {
+            clubs.Remove(clubs.Find(x => x.ClubName == clubName));
+            NavigationManager.NavigateTo("/ClubManagement", forceLoad: true);
+        }
+        else
+        {
+            Console.WriteLine("Failed to delete the club.");
+        }
+    }
+
+
+}

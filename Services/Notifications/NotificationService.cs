@@ -17,14 +17,14 @@
 
         public async Task<List<NotificationDto>> GetUnreadNotificationsAsync()
         {
-            var response = await _httpClient.GetAsync("http://localhost:5115/api/User/unread-notifications");
+            var response = await _httpClient.GetAsync("https://localhost:7158/api/User/unread-notifications");
             if (response.IsSuccessStatusCode)
             {
                 return await response.Content.ReadFromJsonAsync<List<NotificationDto>>();
             }
             else
             {
-                // Handle error or return an empty list
+           
                 return new List<NotificationDto>();
             }
         }

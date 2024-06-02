@@ -1,0 +1,46 @@
+﻿@page "/signup"
+@using DTU_Sport_UI.Services
+@using DTU_Sport_UI.Models
+@inject IUserService UserService
+@inject NavigationManager NavigationManager
+
+<h3 style="margin-left: 10px">Sign Up</h3>
+
+@if (showSignUpForm)
+{
+    <EditForm Model="@signUp" OnValidSubmit="HandleSignUp">
+        <InputText @bind-Value="signUp.Username" class="form-control" placeholder="Username" style="margin-bottom: 10px;" />
+        <InputText @bind-Value="signUp.Email" type="email" class="form-control" placeholder="Email" style="margin-bottom: 10px;" />
+        <InputText @bind-Value="signUp.Password" type="password" class="form-control" placeholder="Password" style="margin-bottom: 10px;" />
+
+        <button type="submit" class="button-custom">Register</button>
+    </EditForm>
+
+}
+
+@code {
+    private SignUpModel signUp = new SignUpModel();
+    private bool showSignUpForm = true;
+
+    private void ToggleSignUpForm()
+    {
+        showSignUpForm = !showSignUpForm;
+    }
+
+
+    private async Task HandleSignUp()
+    {
+        if (await UserService.SignUpAsync(signUp))
+        {
+            
+            Console.WriteLine("Registration successful");
+            NavigationManager.NavigateTo("/login");
+
+        }
+        else
+        {
+           
+            Console.WriteLine("Registration failed");
+        }
+    }
+}

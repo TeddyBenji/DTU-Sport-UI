@@ -3,43 +3,115 @@
 @using DTU_Sport_UI.Services
 @using DTU_Sport_UI.Models
 @inject INotificationService NotificationService
+@inject IUserService UserService
 @inject AuthenticationStateProvider AuthenticationStateProvider
 @inject NavigationManager NavigationManager
 @inject HttpClient ServerAPI
 
-<PageTitle>Home</PageTitle>
+<PageTitle>Profile</PageTitle>
 
 @code {
     private AuthenticationState authenticationState;
     private List<NotificationDto> notifications;
+    private string userBio;
+    private string editableBio;
+    private string username = "Guest";
+    private bool isEditing = false;
 
     protected override async Task OnInitializedAsync()
     {
         authenticationState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
-        if (authenticationState.User.Identity.IsAuthenticated)
+        if (authenticationState?.User?.Identity?.IsAuthenticated == true)
         {
-            notifications = await NotificationService.GetUnreadNotificationsAsync();
+            notifications = await NotificationService.GetUnreadNotificationsAsync() ?? new List<NotificationDto>();
+            userBio = await UserService.GetBioAsync();
+            editableBio = userBio;  
+            username = authenticationState.User.FindFirst("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name")?.Value ?? "Guest";
         }
+        else
+        {
+            notifications = new List<NotificationDto>();  
+        }
+    }
+
+
+
+    private async Task ToggleEdit()
+    {
+        if (isEditing)
+        {
+            if (await UserService.UpdateBioAsync(new BioModel { Bio = editableBio }))
+            {
+                userBio = editableBio;  
+            }
+           
+        }
+        isEditing = !isEditing;  
     }
 }
 
-@if (authenticationState.User.Identity.IsAuthenticated)
+@if (authenticationState?.User?.Identity?.IsAuthenticated == true)
 {
-    <h1>Welcome @authenticationState.User.Identity.Name!</h1>
-    <h3>Your notifications:</h3>
-    if (notifications != null && notifications.Count > 0)
-    {
-        <ul>
-            @foreach (var notification in notifications)
+
+    <div style="margin: 3rem 10px; border: 2px #990000; text-align: center; padding: 10px;">
+        <h1>Welcome @username!</h1>
+    </div>
+
+    <div class="mt-3 mb-3">
+        <h5 style="font-weight: bold; margin-top: 40px; margin-left: 10px">Your Goal:</h5>
+
+        @if (isEditing)
+        {
+            <textarea class="form-control" style="background-image: none; background-color: darkred; color: white;" @bind="editableBio"></textarea>
+        }
+        else
+        {
+            <h5 style="margin-left: 10px">@userBio</h5>
+        }
+        <button class="button-custom" style="margin-top: 10px; margin-left: 10px" @onclick="ToggleEdit">
+            @if (isEditing)
             {
-                <li>@notification.Message - @notification.EventDate.ToShortDateString()</li>
+                <span>Save Goal</span>
             }
-        </ul>
+            else
+            {
+                <span>Edit Goal</span>
+            }
+        </button>
+    </div>
+
+
+    <h2 style="font-weight: bold; margin-top: 40px; margin-left: 10px">Your notifications:</h2>
+
+    @if (notifications != null && notifications.Count > 0)
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Club</th>
+                    <th>Message</th>
+                    <th>Description</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var notification in notifications)
+                {
+                    <tr>
+                        <td>@notification.ClubName</td>
+                        <td>@notification.Message</td>
+                        <td>@notification.Description</td>
+                        <td>@notification.EventDate.ToShortDateString()</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
     }
     else
     {
         <p>You have no new notifications.</p>
     }
+
 }
 else
 {

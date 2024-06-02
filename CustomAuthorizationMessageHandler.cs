@@ -17,6 +17,8 @@ namespace DTU_Sport_UI
             var token = await _sessionStorage.GetItemAsStringAsync("authToken");
             if (!string.IsNullOrEmpty(token))
             {
+                token = token.Trim('"');
+
                 request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", token);
             }
 

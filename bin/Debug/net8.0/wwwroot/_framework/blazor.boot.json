@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "DTU-Sport-UI",
   "resources": {
-    "hash": "sha256-3kfnFUV4Tzq64n5wjQa4NLHTsKr0zJ7op5ceuUcJJMU=",
+    "hash": "sha256-IzaT1PIY1Ck9yoeBbyP/Kpdw9DwHCI7kXQaPfSFa0as=",
     "jsModuleNative": {
       "dotnet.native.8.0.4.s299hfrl87.js": "sha256-ju0+XWE0ihz554eKEj0HQ8Opa61xpbUIaX5/MNo8we4="
     },
@@ -17,6 +17,8 @@
       "icudt_no_CJK.dat": "sha256-L7sV7NEYP37/Qr2FPCePo5cJqRgTXRwGHuwF5Q+0Nfs="
     },
     "assembly": {
+      "AntiXssLibrary.wasm": "sha256-EGWcIsrnoyHh5mTxUQfCSgPOodoIyZ7G66k8aAN5qqY=",
+      "HtmlSanitizationLibrary.wasm": "sha256-5nltx/tyaO2gpVszPPXpw3vsO/glyj8MSDFHoM6uXjg=",
       "Blazored.LocalStorage.wasm": "sha256-OaMAAd5n7ORfyur5e3QIyEVKJ76MKIvwbg7/icnnYcU=",
       "Blazored.SessionStorage.wasm": "sha256-nQXuCGHos7iwp2WxRUgarKmWgJYChaVQp2NajgNU3V8=",
       "Microsoft.AspNetCore.Authorization.wasm": "sha256-kcIOasiNC2iD+Tg022f6aTCKnjwzyE8MQTNpQDoIzyw=",
@@ -51,10 +53,15 @@
       "Microsoft.Extensions.Options.wasm": "sha256-5/m+yVFGRuY+N4jQnD+QETKH0AfhAsnVze5dJ5ogIVM=",
       "Microsoft.Extensions.Options.ConfigurationExtensions.wasm": "sha256-C8ZA1VhhrMRPf8Qqv+OrW9za3ggJkCM9i1d8R/F1ETc=",
       "Microsoft.Extensions.Primitives.wasm": "sha256-pVrYOTfjb2ITls3LKIByW1t8jwOAWFhmkIVDewtJ1GE=",
+      "Microsoft.IdentityModel.Abstractions.wasm": "sha256-r30Ky+kD+BZxaTAr8P7/M02xkxtvL1VfBlH9T38ATAs=",
       "Microsoft.IdentityModel.Clients.ActiveDirectory.wasm": "sha256-WDiXiyX2kB+khKsPqp11CCQeqwAdrL6O2ih9VR30OsY=",
+      "Microsoft.IdentityModel.JsonWebTokens.wasm": "sha256-s4PcUGVsWd3RawK+erm+TTtlaW7lKCGUikybScse+Fs=",
+      "Microsoft.IdentityModel.Logging.wasm": "sha256-bk17ZiVjOp+pT6v/BFZNCIl+pGqg//GEggIebJN4x2A=",
+      "Microsoft.IdentityModel.Tokens.wasm": "sha256-007xuDnm4v+hMpJrxaWzOijbGgrD3RuurnF/l4ibZEQ=",
       "Microsoft.JSInterop.wasm": "sha256-GsAOzdCVCC+n7tPF4K83ctQiqj1M850bsiJ5oPCpOiE=",
       "Microsoft.JSInterop.WebAssembly.wasm": "sha256-OU61RdB3MGGK/px7V+70S2lQ+RUl6pqHspk5yX0tGtc=",
       "Microsoft.Net.Http.Headers.wasm": "sha256-b59APrldqivzbOYVb0CV+lGgWn4HyUPjMa/cplEp2x8=",
+      "System.IdentityModel.Tokens.Jwt.wasm": "sha256-PO+x96C/PkZ0SBbU+a9mIaUKvAK79n200oqZ/t+TxrE=",
       "System.IO.Pipelines.wasm": "sha256-JqVBy6SV+3qk+IK3VJiyIDt9CsVk6b1/ytTXmrI4mTM=",
       "Microsoft.CSharp.wasm": "sha256-QZ+XNH5nEsUeYa9owq17t0oiJ5OcWkIe6xmu1ro91bI=",
       "Microsoft.VisualBasic.Core.wasm": "sha256-UOAvLLXjmwn59rkItc52d8N/uOO/+VkexM1gKlDr4Js=",
@@ -224,10 +231,10 @@
       "mscorlib.wasm": "sha256-VCfYgt1mcjITabSTosCDVZ+68ea3Z7kakTFaLNLG+18=",
       "netstandard.wasm": "sha256-YOZxxR9PM3Dltcijfb0Q4FD39DkWZbZ1e2ScbZDvWJ4=",
       "System.Private.CoreLib.wasm": "sha256-NrT1QkAzVU//2wgK9vXdq77lCGvLJ4IOZ+Aegesyanc=",
-      "DTU-Sport-UI.wasm": "sha256-4EkImeZv4AN4W+pfsvlNzlkbHEnr+CdlL2FYYsm19To="
+      "DTU-Sport-UI.wasm": "sha256-wg31G+inlfCZVPkZBJ7Lf3/3rxmrqhf86nB9K985bxM="
     },
     "pdb": {
-      "DTU-Sport-UI.pdb": "sha256-m2FUKF3XtkOXRaxwwU7tp4BbGEfWaDRp8X89nBxu0PI="
+      "DTU-Sport-UI.pdb": "sha256-v4Y6p0aQ7HHhuWuW3XOKwxibMIuxRntABSlUaYKf45M="
     }
   },
   "cacheBootResources": true,

@@ -1,0 +1,92 @@
+﻿@page "/MyClub/{ClubName}"
+@using DTU_Sport_UI.Models
+@using DTU_Sport_UI.Services
+@inject IClubService ClubService
+@inject NavigationManager NavigationManager
+
+<div class="container">
+    @if (ClubDetails != null)
+    {
+        <div class="club-info">
+            <h1>@ClubDetails.ClubName</h1>
+            <button class="button-custom" @onclick="ShowCreateEventModal">Create Event</button>
+            <p>@ClubDetails.Description</p>
+        </div>
+
+        @if (showCreateEventModal)
+        {
+            <EditForm Model="newEvent" OnValidSubmit="HandleCreateEvent">
+                <DataAnnotationsValidator />
+                <ValidationSummary />
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <InputText id="title" @bind-Value="newEvent.Title" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <InputTextArea id="description" @bind-Value="newEvent.Description" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="eventDate">Event Date</label>
+                    <InputDate id="eventDate" @bind-Value="newEvent.EventDate" class="form-control" />
+                </div>
+                <button type="submit" class="button-custom">Create Event</button>
+            </EditForm>
+
+        }
+    }
+    else
+    {
+        <p>Loading club details...</p>
+    }
+</div>
+
+@code {
+    [Parameter]
+    public string ClubName { get; set; }
+    public ClubModel ClubDetails { get; set; }
+    private EventModel newEvent = new EventModel();
+    private bool showCreateEventModal = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            ClubDetails = await ClubService.GetClubDetailsAsync(ClubName);
+            if (ClubDetails == null)
+            {
+                Console.WriteLine("Club details not found.");
+                NavigationManager.NavigateTo("/Clubs");
+            }
+            else
+            {
+                newEvent.ClubName = ClubName;
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error fetching club details: {ex.Message}");
+           
+        }
+    }
+
+
+    private void ShowCreateEventModal()
+    {
+        showCreateEventModal = true;
+    }
+
+    private async Task HandleCreateEvent()
+    {
+        var success = await ClubService.CreateEventAsync(newEvent);
+        if (success)
+        {
+            showCreateEventModal = false; // Close the modal on success
+            NavigationManager.NavigateTo($"/MyClub/{ClubName}"); // Refresh or navigate
+        }
+        else
+        {
+            Console.WriteLine("Failed to create event.");
+        }
+    }
+}

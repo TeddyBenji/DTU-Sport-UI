@@ -110,21 +110,21 @@ code {
 }
 
 .club-list li {
-    margin-bottom: 20px; /* Spacing between club entries */
+    margin-bottom: 20px; 
     display: flex;
-    align-items: center; /* Vertically align the contents */
-    justify-content: space-between; /* Spreads the items to each end */
+    align-items: center; 
+    justify-content: space-between;
     padding: 10px;
-    border-bottom: 1px solid #ccc; /* Optional line between entries */
+    border-bottom: 1px solid #ccc; 
 }
 
 .club-info {
-    flex: 1; /* Allows the club info to take up the remaining space */
-    margin-right: 10px; /* Adds some space between the text and the button */
+    flex: 1; 
+    margin-right: 10px; 
 }
 
 .register-btn {
-    white-space: nowrap; /* Ensures the button text doesn't wrap */
+    white-space: nowrap; 
 }
 
 .card-header {
@@ -137,18 +137,18 @@ code {
 }
 
 h3 {
-    margin-bottom: 2rem; /* Adjust the space below the h3 header */
+    margin-bottom: 2.5rem; 
 }
 
 .training-logs-container {
-    margin-top: 1rem; /* Adds space above the training log container */
-    padding: 0 1rem; /* Optional: Adds horizontal padding */
+   
+    padding: 0 1rem; 
 }
 
 input[type="text"] {
     width: 100%;
     padding: 8px;
-    margin-bottom: 1rem; /* Adds space below the input field */
+    margin-bottom: 1rem;
 }
 
 .modal-backdrop {
@@ -173,11 +173,11 @@ input[type="text"] {
 }
 
 .form-input {
-    margin-bottom: 10px; /* Adds space below each input */
+    margin-bottom: 100px; 
 }
 
 .form-button {
-    margin-top: 100px; /* Adds space above the button */
+    margin-top: 100px;
 }
 
 .table {
@@ -202,7 +202,7 @@ input[type="text"] {
         border-top: 2px solid #dee2e6;
     }
 
-/* Optional: Responsive table layout */
+
 @media (max-width: 768px) {
     .table-responsive {
         display: block;
@@ -212,22 +212,22 @@ input[type="text"] {
     }
 }
 
-/* CSS for normal button state */
+
 .button-custom {
-    background-color: darkred;
+    background-color: #e60000;
     color: white;
-    border: none;
-    padding: 10px 20px;
+    border: 1.5px solid black !important;
+    padding: 4px 14px;
     cursor: pointer;
-    transition: background-color 0.3s; /* Smooth transition for background color */
+    transition: background-color 0.3s; 
 }
 
-    /* CSS for hover state */
+    
     .button-custom:hover {
-        background-color: #990000; /* Lighter red for hover */
+        background-color: #990000; 
     }
 
-/* Add to app.css or a similar file */
+
 .container {
     margin-left: 10px;
-    }
+}

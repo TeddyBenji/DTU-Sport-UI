@@ -27,7 +27,7 @@ public class AuthenticationService
             {"scope", "openid profile read write update Delete"}
         };
 
-        var response = await _httpClient.PostAsync("http://localhost:5250/connect/token", new FormUrlEncodedContent(requestBody));
+        var response = await _httpClient.PostAsync("https://localhost:7239/connect/token", new FormUrlEncodedContent(requestBody));
         if (response.IsSuccessStatusCode)
         {
             var jsonResponse = await response.Content.ReadAsStringAsync();
@@ -38,6 +38,7 @@ public class AuthenticationService
                 authResult.IsSuccess = true;
                 await _sessionStorage.SetItemAsync("authToken", authResult.Token);
                 await _sessionStorage.SetItemAsync("tokenExpiry", DateTime.UtcNow.AddSeconds(authResult.ExpiresIn));
+                Console.WriteLine(authResult);
                 return authResult;
             }
             else
@@ -71,7 +72,7 @@ public class AuthenticationService
         [JsonPropertyName("scope")]
         public string Scope { get; set; }
 
-        public bool IsSuccess { get; set; }  // This doesn't come from JSON, you set it manually
+        public bool IsSuccess { get; set; } 
         public string Error { get; set; }
     }
 }

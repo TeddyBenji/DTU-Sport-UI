@@ -5,20 +5,23 @@
 @inject NavigationManager NavigationManager
 @inject HttpClient Http
 
-<h3>Login</h3>
+<h2 style="margin-left: 10px">Login</h2>
 
 @if (!isSubmitting)
 {
-    <EditForm Model="@loginModel" OnValidSubmit="HandleLogin">
+    <EditForm Model="@loginModel" OnValidSubmit="HandleLogin" style="margin-left: 10px;">
         <InputText @bind-Value="loginModel.Username" />
         <InputText type="password" @bind-Value="loginModel.Password" />
-        <button type="submit">Log in</button>
+        <button class="button-custom" type="submit" style="margin-top: 10px">Log in</button>
     </EditForm>
 }
 else
 {
     <p>Logging in...</p>
 }
+
+<button class="button-custom" type="button" @onclick="RedirectToSignUp" style="margin-top: 10px; margin-left: 10px">Sign Up</button>
+
 
 @code {
     private LoginModel loginModel = new LoginModel();
@@ -30,7 +33,7 @@ else
         var result = await AuthenticationService.LoginAsync(loginModel.Username, loginModel.Password);
         if (result.IsSuccess)
         {
-            // Directly navigate to the home page after successful login
+            
             NavigationManager.NavigateTo("/", forceLoad: true);
         }
         else
@@ -39,6 +42,13 @@ else
         }
         isSubmitting = false;
     }
+
+    private void RedirectToSignUp()
+    {
+        NavigationManager.NavigateTo("/signup");
+    }
+
+
 
     public class LoginModel
     {

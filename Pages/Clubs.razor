@@ -1,0 +1,85 @@
+﻿@page "/Clubs"
+@using Microsoft.AspNetCore.Components.Authorization
+@using DTU_Sport_UI.Models
+@using DTU_Sport_UI.Services
+@inject IClubService ClubService
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@inject NavigationManager NavigationManager
+
+<h3 style="margin-left: 10px">Clubs</h3>
+<div class="club-list" style="margin-left: 10px">
+    @if (clubs == null)
+    {
+        <p><em>Loading...</em></p>
+    }
+    else if (clubs.Count == 0)
+    {
+        <p>No clubs available.</p>
+    }
+    else
+    {
+        <ul>
+            @foreach (var club in clubs)
+            {
+                <li>
+                    <div class="club-info">
+                        <b>@club.ClubName</b> - @club.Description - Created on @club.CreationDate.ToShortDateString()
+                    </div>
+                    <button class="button-custom" style="margin-right: 10px" @onclick="() => RegisterClub(club.ClubName)">Register</button>
+
+                    <button class="button-custom" @onclick="() => NavigateToClub(club.ClubName)">View Details</button>
+                </li>
+            }
+        </ul>
+    }
+</div>
+
+
+@code {
+    private List<ClubDto>? clubs;
+    private string username = "Guest";  
+
+    protected override async Task OnInitializedAsync()
+    {
+        var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var user = authState.User;
+
+        if (user.Identity.IsAuthenticated)
+        {
+            username = user.FindFirst("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name")?.Value ?? "Guest";
+        }
+
+        clubs = await ClubService.GetAllClubsAsync();
+    }
+
+    private async Task RegisterClub(string clubName)
+    {
+        if (username == "Guest")
+        {
+            
+            Console.WriteLine("User must be logged in to register for a club.");
+            return;
+        }
+
+        var isSuccess = await ClubService.RegisterMemberAsync(clubName, username);
+        if (isSuccess)
+        {
+            Console.WriteLine($"Successfully registered for {clubName}");
+            
+        }
+        else
+        {
+            Console.WriteLine($"Failed to register for {clubName}");
+           
+        }
+
+    }
+
+    private void NavigateToClub(string clubName)
+    {
+        NavigationManager.NavigateTo($"/MyClub/{clubName}");
+    }
+
+}
+
+

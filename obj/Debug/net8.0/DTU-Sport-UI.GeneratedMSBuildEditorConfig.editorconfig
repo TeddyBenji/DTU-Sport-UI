@@ -26,8 +26,16 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Benjamin/DTU-Sport-UI/Pages/Bio.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQmlvLnJhem9y
+[C:/Users/Benjamin/DTU-Sport-UI/Pages/ClubManagment.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2x1Yk1hbmFnbWVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Benjamin/DTU-Sport-UI/Pages/ClubPPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2x1YlBQYWdlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Benjamin/DTU-Sport-UI/Pages/Clubs.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2x1YnMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Benjamin/DTU-Sport-UI/Pages/Home.razor]
@@ -36,6 +44,18 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Benjamin/DTU-Sport-UI/Pages/Login.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Benjamin/DTU-Sport-UI/Pages/SignUp.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2lnblVwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Benjamin/DTU-Sport-UI/Pages/TrainingLog.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVHJhaW5pbmdMb2cucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Benjamin/DTU-Sport-UI/Pages/UserManagment.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlck1hbmFnbWVudC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Benjamin/DTU-Sport-UI/_Imports.razor]

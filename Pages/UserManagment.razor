@@ -1,0 +1,99 @@
+﻿@page "/UserManagement"
+@using DTU_Sport_UI.Services
+@using DTU_Sport_UI.Models
+@inject IUserService UserService
+
+<h3 style="margin-left: 10px">User Management</h3>
+
+<style>
+    .table th, .table td {
+        border-top: 1px solid #dee2e6; 
+    }
+
+    .table thead th {
+        border-bottom: 2px solid #dee2e6; 
+    }
+
+    .dropdown-menu {
+        cursor: pointer; 
+    }
+</style>
+
+@if (users == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Profile ID</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in users)
+            {
+                <tr>
+                    <td>@user.Username</td>
+                    <td>@user.Email</td>
+                    <td>@user.ProfileID</td>
+                    <td>
+                        <div class="btn-group" >
+                            <button class="button-custom" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Manage Role
+                            </button>
+
+                            <div class="dropdown-menu">
+                                @foreach (var role in roles)
+                                {
+                                    <a class="dropdown-item" @onclick="@(async () => await AssignRole(user.Username, role))">@role</a>
+                                }
+                            </div>
+                        </div>
+                        <button class="button-custom" @onclick="@(async () => await ConfirmDelete(user.Username))">Delete</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private List<UserDto> users;
+    private List<string> roles = new List<string> { "User", "Trainer", "ClubOwner", "Admin" };
+
+    protected override async Task OnInitializedAsync()
+    {
+        users = await UserService.GetAllUsersAsync();
+    }
+
+    private async Task AssignRole(string username, string role)
+    {
+        var success = await UserService.AssignRoleAsync(new AssignRoleModel { Username = username, Role = role });
+        if (!success)
+        {
+            Console.WriteLine("Error assigning role.");
+        }
+    }
+
+    private async Task ConfirmDelete(string username)
+    {
+        var confirmation = true; 
+        if (confirmation)
+        {
+            var success = await UserService.DeleteUserAsync(username);
+            if (!success)
+            {
+                Console.WriteLine("Error deleting user.");
+            }
+            else
+            {
+                users.RemoveAll(u => u.Username == username); 
+            }
+        }
+    }
+}

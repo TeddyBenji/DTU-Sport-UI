@@ -1,47 +1,16 @@
 ﻿@inherits LayoutComponentBase
 
-<style>
-    .page {
-        display: flex;
-        min-height: 100vh;
-        flex-direction: row;
-    }
-
-    .sidebar {
-        background-color: Crimson; /* Red theme for the sidebar */
-    }
-
-    .top-row {
-        background-color: Crimson;
-        color: white;
-    }
-
-    .content {
-        flex-grow: 1;
-        padding: 20px; /* Padding for content */
-    }
-
-    a {
-        color: white; /* Ensuring text links in the top row are white */
-        text-decoration: none; /* Optional: removes underline from links */
-    }
-
-        a:hover {
-            text-decoration: underline; /* Optional: adds underline on hover */
-        }
-</style>
-
 <div class="page">
-    <div class="sidebar">
+    <div style="background-image:none;background-color:#990000;" class="sidebar">
         <NavMenu />
     </div>
 
-    <main>
+    <main class="flex-grow-1">
         <div class="top-row px-4">
             <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
         </div>
 
-        <article class="content px-4">
+        <article class="content">
             @Body
         </article>
     </main>
